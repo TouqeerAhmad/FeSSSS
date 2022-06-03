@@ -8,7 +8,6 @@ from torch.utils.data import Dataset
 from torchvision import transforms
 from torchvision.models.resnet import resnet18
 
-
 class CUB200(Dataset):
 
     def __init__(self, root='./', train=True,
