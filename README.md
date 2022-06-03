@@ -16,22 +16,25 @@ To extract the self-supervised features, run the feature extractor ```FeatureExt
 
 ## Self-Supervised Pre-Trained Models
 We have used the following self-supervised models respectively for cub200, mini_imagenet, and cifar100 datasets. To avoid overlap between mini_imagenet and imagenet, OpenImages based self-supervised features learned through MoCo-v2 are used instead.  
-1. CUB200 
+### CUB200: 
   1. ILSVRC-2012 based ResNet50 trained via DeepCluster-v2
   2. ILSVRC-2012 based ResNet50 trained via MoCo-v2
   3. ILSVRC-2012 based ResNet50 trained via SeLa-v2
   4. ILSVRC-2012 based ResNet50 trained via SwAV
-2. mini_ImageNet
+
+### mini_ImageNet:
   1. OpenImages-v6 based ResNet50 trained via MoCo-v2
   3. ILSVRC-2012 based ResNet50 trained via DeepCluster-v2 (for ablation study)
   4. ILSVRC-2012 based ResNet50 trained via MoCo-v2 (for ablation study)
   5. ILSVRC-2012 based ResNet50 trained via SeLa-v2 (for ablation study)
   6. ILSVRC-2012 based ResNet50 trained via SwAV (for ablation study)
-3. CIFAR100 
+
+### CIFAR100: 
   1. ILSVRC-2012 based ResNet50 trained via DeepCluster-v2
   2. ILSVRC-2012 based ResNet50 trained via MoCo-v2
   3. ILSVRC-2012 based ResNet50 trained via SeLa-v2
   4. ILSVRC-2012 based ResNet50 trained via SwAV
+
 The pre-trained self-supervised models are provided from the following [Google drive link]().   
 
 
