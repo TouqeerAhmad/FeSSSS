@@ -14,6 +14,24 @@ Mainly our code builds upon the CVPR 2021 paper on FSCIL called [Continually Evo
 ## Self-Supervised Feature Extraction
 To extract the self-supervised features, run the feature extractor ```FeatureExtraction_MocoV2.py``` in respective data set directory by providing the path to the pre-trained self-supervised model and other required arguments. For example for cub200, the above file is located in CEC_CVPR2021/dataloader/cub200/ directory. A bash file (```run_feature_extractor_mocov2_rest_of_sessions.sh```) demonstrates running feature extractor for all incremental sessions and saving self-supervised features for 60 random crops per each training sample and one central crop per each validation sample.   
 
-## Self-Supervied Pre-Trained Models
+## Self-Supervised Pre-Trained Models
+We have used the following self-supervised models respectively for cub200, mini_imagenet, and cifar100 datasets. To avoid overlap between mini_imagenet and imagenet, OpenImages based self-supervised features learned through MoCo-v2 are used instead.  
+1. CUB200 
+  1. ILSVRC-2012 based ResNet50 trained via DeepCluster-v2
+  2. ILSVRC-2012 based ResNet50 trained via MoCo-v2
+  3. ILSVRC-2012 based ResNet50 trained via SeLa-v2
+  4. ILSVRC-2012 based ResNet50 trained via SwAV
+2. mini_ImageNet
+  1. OpenImages-v6 based ResNet50 trained via MoCo-v2
+  3. ILSVRC-2012 based ResNet50 trained via DeepCluster-v2 (for ablation study)
+  4. ILSVRC-2012 based ResNet50 trained via MoCo-v2 (for ablation study)
+  5. ILSVRC-2012 based ResNet50 trained via SeLa-v2 (for ablation study)
+  6. ILSVRC-2012 based ResNet50 trained via SwAV (for ablation study)
+3. CIFAR100 
+  1. ILSVRC-2012 based ResNet50 trained via DeepCluster-v2
+  2. ILSVRC-2012 based ResNet50 trained via MoCo-v2
+  3. ILSVRC-2012 based ResNet50 trained via SeLa-v2
+  4. ILSVRC-2012 based ResNet50 trained via SwAV
+The pre-trained self-supervised models are provided from the following [Google drive link]().   
 
 
