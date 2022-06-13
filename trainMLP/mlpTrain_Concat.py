@@ -264,10 +264,13 @@ def main(args):
     sessionNames = ['session_01', 'session_02', 'session_03', 'session_04', 'session_05', 'session_06', 'session_07', 'session_08', 'session_09', 'session_10', 'session_11']
     num_classesAll = [100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200]
     numOfSessionInThisDataSet = 11
+    numIncrementalClasses = 10
   else:
     sessionNames = ['session_01', 'session_02', 'session_03', 'session_04', 'session_05', 'session_06', 'session_07', 'session_08', 'session_09']
     num_classesAll = [60, 65, 70, 75, 80, 85, 90, 95, 100]
     numOfSessionInThisDataSet = 9
+    numIncrementalClasses = 5
+    
       
   
   Top1_Performance = []
@@ -336,7 +339,6 @@ def main(args):
     features2 = featuresTemp2[:,1:]
     features = normalize_and_concat_features(features1, features2, args.featureBeingUsed)
     labels = featuresTemp1[:,0]
-    numIncrementalClasses = 10
     numInstancesPerClass = int(labels.shape[0] / numIncrementalClasses)
     
     if (args.gnerateData):
