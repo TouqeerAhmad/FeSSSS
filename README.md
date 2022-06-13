@@ -40,10 +40,16 @@ The pre-trained self-supervised models are available from the following [Google 
 ## Supervised Feature Extraction
 To extract the supervised features learned using the base-session data of FSCIL, run the feature extractor ```FeatureExtraction_MocoV2.py``` in respective data set directory by providing the path to the pre-trained supervised model and other required arguments. While any supervised model can be trained using the base-session data, we have specifically used the CEC-based learned models.
 
-## Checkpoints for CEC-based Supervised Models
+### Checkpoints for CEC-based Supervised Models
 The supervised models can be accessed via the Google drive link provided on CEC's [repo](https://github.com/icoz69/CEC-CVPR2021) or our self-archived version from the Google drive link shared above. 
 
-## BibTeX
+
+## Training the Two Layer Perceptron
+Once the self-supervised and supervised feature are extracted, the multi (two) layer perceptron can be trained using the code provided in trainMLP directory, specifically ```mlpTrain_Concat.py```. A bash file  (```run_script.sh```) demonstrates training the MLP using concatenated features by providing the directories containing respective feature files, and other required arguments. MLP training uses the logger from [VAST repo](https://github.com/Vastlab/vast).       
+
+
+
+### BibTeX
 If you find our work helpful, please cite the following:
 
 ```
