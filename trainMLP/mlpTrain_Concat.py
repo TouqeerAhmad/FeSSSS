@@ -147,7 +147,7 @@ def run_base_session(dataSetInUse, NUMBER_OF_FEATURE_FILES, epochs, dirSelfSuper
   else:
     num_classes = 60
   
-  mainDirName = '/home/tahmad/work/FSCIL/trainMLP/' + dataSetInUse + '/'
+  mainDirName = '/home/tahmad/work/FeSSSS/trainMLP/' + dataSetInUse + '/'
   os.mkdir(mainDirName)
   logDirName = mainDirName  + dataSetInUse + '_tempDir1' 
   modelOutputDirName = mainDirName + dataSetInUse +'_trained_models_session_01'
@@ -306,7 +306,7 @@ def main(args):
     num_classes = num_classesAll[sessIndex-1]
     
     # initialize MLP with session_01 trained model
-    mainDirName = '/home/tahmad/work/FSCIL/trainMLP/' + args.dataSetInUse + '/'
+    mainDirName = '/home/tahmad/work/FeSSSS/trainMLP/' + args.dataSetInUse + '/'
     output_dir = mainDirName + args.dataSetInUse + '_tempDir'  + str(sessIndex+1)
     logger = vastlogger.setup_logger(level=0, output=output_dir)
     net_obj = network_operations.network(num_classes=num_classes, input_feature_size=N_feature, output_dir = output_dir)
