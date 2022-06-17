@@ -45,8 +45,7 @@ The supervised models can be accessed via the Google drive link provided on CEC'
 
 
 ## Training the Two Layer Perceptron
-Once the self-supervised and supervised feature are extracted, the multi (two) layer perceptron can be trained using the code provided in trainMLP directory, specifically ```mlpTrain_Concat.py```. A bash file  (```run_script.sh```) demonstrates training the MLP using concatenated features by providing the directories containing respective feature files, and other required arguments. MLP training uses the logger from [VAST repo](https://github.com/Vastlab/vast).       
-
+Once the self-supervised and supervised feature are extracted, the multi (two) layer perceptron can be trained using the code provided in trainMLP directory, specifically ```mlpTrain_Concat.py```. A bash file  (```run_script.sh```) demonstrates training the MLP using concatenated features by providing the directories containing respective feature files, and other required arguments. MLP training uses the logger from [VAST repo](https://github.com/Vastlab/vast), please install it following the instructions. Once the training is complete, the log file would be saved in the trainMLP folder due to comman-line redirection as shown in ```run_script.sh```. Average incremental accuracy is reported for all incremental sessions at the end of the log file.           
 
 
 ### BibTeX
