@@ -10,6 +10,11 @@ The paper is focused on enhanced performance of FSCIL by concatenating self-supe
 
 Mainly our code builds upon the CVPR 2021 paper on FSCIL called [Continually Evolved Classifiers](https://github.com/icoz69/CEC-CVPR2021). For ease we provide our code integrated into CEC repo where we have made changes to their original code, for licensing of CEC, please consult CEC-authors' original repo.  
 
+## Requirements
+Code has been tested in [conda](https://docs.conda.io/en/latest/) virtual env and uses the following: 
+- Python = 3.8.5
+- [PyTorch = 1.8.1+cu111](https://pytorch.org)
+
 
 ## Self-Supervised Feature Extraction
 To extract the self-supervised features, run the feature extractor ```FeatureExtraction_MocoV2.py``` in respective data set directory by providing the path to the pre-trained self-supervised model and other required arguments. For example for cub200, the above file is located in CEC_CVPR2021/dataloader/cub200/ directory. A bash file (```run_feature_extractor_mocov2_rest_of_sessions.sh```) demonstrates running feature extractor for all incremental sessions and saving self-supervised features for 60 random crops per each training sample and one central crop per each validation sample.   
