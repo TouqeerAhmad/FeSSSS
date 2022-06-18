@@ -14,7 +14,7 @@ Mainly our code builds upon the CVPR 2021 paper on FSCIL called [Continually Evo
 Code has been tested in [conda](https://docs.conda.io/en/latest/) virtual env and uses the following: 
 - Python = 3.8.5
 - [PyTorch = 1.8.1+cu111](https://pytorch.org)
-
+- [VAST](https://github.com/Vastlab/vast)
 
 ## Self-Supervised Feature Extraction
 To extract the self-supervised features, run the feature extractor ```FeatureExtraction_MocoV2.py``` in respective data set directory by providing the path to the pre-trained self-supervised model and other required arguments. For example for cub200, the above file is located in CEC_CVPR2021/dataloader/cub200/ directory. A bash file (```run_feature_extractor_mocov2_rest_of_sessions.sh```) demonstrates running feature extractor for all incremental sessions and saving self-supervised features for 60 random crops per each training sample and one central crop per each validation sample.   
